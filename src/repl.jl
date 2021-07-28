@@ -93,8 +93,8 @@ function create_keybindings()
     D["\eu"]  = (s, data, c) -> (LineEdit.edit_move_word_left(s) ; rewrite_with_ANSI(s))
     D["\eo"]  = (s, data, c) -> (LineEdit.edit_move_word_right(s); rewrite_with_ANSI(s))
 
-    D["^h"]   = (s, data, c) -> (LineEdit.move_line_start(s); rewrite_with_ANSI(s))
-    D["^H"]   = (s, data, c) -> (LineEdit.move_line_end(s); rewrite_with_ANSI(s))
+    D["\eh"]   = (s, data, c) -> (LineEdit.move_line_start(s); rewrite_with_ANSI(s))
+    D["\eH"]   = (s, data, c) -> (LineEdit.move_line_end(s); rewrite_with_ANSI(s))
     D["\eU"] = (s, data, c) -> (LineEdit.move_input_start(s); rewrite_with_ANSI(s))
     D["\eO"] = (s, data, c) -> (LineEdit.move_input_end(buffer(s)); rewrite_with_ANSI(s))
     
